@@ -838,7 +838,7 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  padding: 120px 0 100px;
+  padding: 80px 0;
   position: relative;
   overflow: hidden;
 }
