@@ -34,6 +34,7 @@ Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,2
   --accent-color: #313131; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --orange-color: #DB7132; /* Laranja do site original*/
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
@@ -96,6 +97,7 @@ h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
   text-transform: uppercase;
+  font-weight: 400 !important;
 }
 
 /* PHP Email Form Messages
@@ -476,6 +478,22 @@ h6 {
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+}
+
+.navmenu .btn-accent {
+  background-color: var(--orange-color);
+  color: #ccc;
+  padding-left: 0px;
+  padding-right: 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+.navmenu .btn-accent a {
+  color:#fff;
 }
 
 /*--------------------------------------------------------------
@@ -4241,3 +4259,5 @@ section,
 .hide {
   display: none !important;
 }
+
+
