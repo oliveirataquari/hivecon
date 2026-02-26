@@ -21,7 +21,7 @@ Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,2
 :root {
   --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* --heading-font: "Montserrat",  sans-serif; */
-  --heading-font: "Barlow", sans-serif;
+  --heading-font: "Barlow", sans-serif; 
   /* --nav-font: "Poppins",  sans-serif; */
   --nav-font: "Barlow", sans-serif;
 }
@@ -784,7 +784,7 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
+  padding: 80px 0;
   scroll-margin-top: 87px;
   overflow: clip;
 }
@@ -1242,7 +1242,15 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 .services {
-  background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%);
+  /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
+  background-color: var(--heading-color);  
+}
+.services h2 {
+  color:#fff;
+}
+.services p {
+  color:#fff;
+  opacity: .7;
 }
 
 .services .service-item {
@@ -1264,7 +1272,7 @@ section,
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 30%));
+  background: linear-gradient(90deg, var(--orange-color), color-mix(in srgb, var(--orange-color), var(--orange-color) 30%));
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease-in-out;
@@ -1272,7 +1280,7 @@ section,
 
 .services .service-item:hover {
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px color-mix(in srgb, var(--default-color), transparent 90%);
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--orange-color), transparent 90%);
 }
 
 .services .service-item:hover::before {
@@ -1295,6 +1303,7 @@ section,
   width: 80px;
   height: 80px;
   background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--heading-color) 20%));
+  background: var(--orange-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -4260,4 +4269,17 @@ section,
   display: none !important;
 }
 
+.section-title .subtitle {
+  display:none;
+}
 
+
+.gprev,
+.gnext {
+  display: none !important;
+}
+
+.gslide-external {
+  border-radius: 10px;
+  overflow: hidden; /* MUITO IMPORTANTE */
+}
