@@ -971,8 +971,8 @@ section,
 }
 
 .hero .hero-image img {
-  border-radius: 12px;
-  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%);
+  /* border-radius: 12px;
+  box-shadow: 0 20px 60px color-mix(in srgb, var(--default-color), transparent 85%); */
 }
 
 .hero .hero-image .floating-card {
@@ -1291,6 +1291,11 @@ section,
   transform: scale(1.1);
 }
 
+.services .service-item .service-link {
+  padding: 10px 20px;
+  border: 1px solid var(--orange-color);
+  border-radius: 8px;
+}
 .services .service-item:hover .service-link {
   color: var(--accent-color);
 }
@@ -4273,7 +4278,7 @@ section,
   display:none;
 }
 
-
+/* Modal Glightbox */
 .gprev,
 .gnext {
   display: none !important;
@@ -4282,4 +4287,28 @@ section,
 .gslide-external {
   border-radius: 10px;
   overflow: hidden; /* MUITO IMPORTANTE */
+}
+
+.goverlay {
+  background: rgba(0, 0, 0, 0.75) !important;
+}
+
+.gclose svg {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.glightbox-clean .gclose {
+  top: 30px !important;   /* mais para baixo */
+  right: 30px !important; /* mais para a esquerda */
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .gslide-external {
+    width: 95vw !important;
+    height: 90vh !important;
+    display: block !important;
+    margin:0 auto !important
+  }
 }

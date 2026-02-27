@@ -141,7 +141,7 @@
 
           <div class="col-lg-6">
             <div class="hero-image" data-aos="fade-left" data-aos-delay="300">
-              <img src="assets/img/about/about-square-10.webp" alt="Business Success" class="img-fluid">
+              <img src="assets/img/about/about-square-10.png" alt="Business Success" class="img-fluid">
               <div class="floating-card" data-aos="zoom-in" data-aos-delay="600">
                 <div class="card-icon">
                   <i class="bi bi-graph-up-arrow"></i>
@@ -247,7 +247,7 @@
               <h3>Abra sua empresa</h3>
               <p>Abra o seu negócio com tranquilidade. Aqui você encontra todos os recursos necessários para começar a sua empresa com a segurança 
                 de poder contar com um escritório que tem a sua satisfação como principal meta.</p>
-              <a href="service-details.html" class="service-link glightbox" data-glightbox="type: external; width: 90vw; height: 90vh;">
+              <a href="starter-page.html" class="service-link glightbox" >
                 Leia mais <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -1156,6 +1156,20 @@
   <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+
+  <!-- Javascript personalizado -->
+  <!-- Para usar direto no link use:  data-glightbox="type: external; width: 80vw; height: 80vh;" -->
+  <script>
+    const isMobile = window.innerWidth < 768;
+    const lightboxServices = GLightbox({
+      selector: '.glightbox',
+      width: isMobile ? '95vw' : '1200px',
+      height: isMobile ? '95vh' : '800px'
+    });
+  </script>
+
+
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
