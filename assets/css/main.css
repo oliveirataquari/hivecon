@@ -1243,8 +1243,9 @@ section,
 --------------------------------------------------------------*/
 .services {
   /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
-  background-color: var(--heading-color);  
+  background-color: var(--heading-color);
 }
+
 .services h2 {
   color:#fff;
 }
