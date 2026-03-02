@@ -247,7 +247,7 @@
               <h3>Abra sua empresa</h3>
               <p>Abra o seu negócio com tranquilidade. Aqui você encontra todos os recursos necessários para começar a sua empresa com a segurança 
                 de poder contar com um escritório que tem a sua satisfação como principal meta.</p>
-              <a href="starter-page.html" class="service-link glightbox" >
+              <a href="starter-page.html" class="service-link glightbox" data-glightbox="type: external; width: 80vw; height: 80vh;" >
                 Leia mais <i class="bi bi-arrow-right"></i>
               </a>
             </div>
@@ -1160,15 +1160,16 @@
 
   <!-- Javascript personalizado -->
   <!-- Para usar direto no link use:  data-glightbox="type: external; width: 80vw; height: 80vh;" -->
+  <!-- 
   <script>
     const isMobile = window.innerWidth < 768;
     const lightboxServices = GLightbox({
       selector: '.glightbox',
-      width: isMobile ? '95vw' : '1200px',
-      height: isMobile ? '95vh' : '800px'
+      max-width: isMobile ? '95vw' : '1200px',
+      max-height: isMobile ? '95vh' : '800px'
     });
   </script>
-
+  -->
 
 
   <!-- Main JS File -->
