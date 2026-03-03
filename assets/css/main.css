@@ -908,11 +908,62 @@ section,
   border: none;
   box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
 }
-
 .hero .hero-cta .btn-primary:hover {
   background-color: color-mix(in srgb, var(--accent-color), black 10%);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.hero .hero-cta .btn-primary-blue {
+  background-color: var(--heading-color);
+  color: var(--contrast-color);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+.hero .hero-cta .btn-primary-blue:hover {
+  background-color: color-mix(in srgb, var(--accent-color), black 10%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%);
+}
+
+.hero .hero-cta .btn-primary-transp {
+  background-color: none;
+  color: var(--orange-color);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  /* border: solid 2px var(--heading-color); */
+  /* box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%); */
+}
+.hero .hero-cta .btn-primary-transp:hover {
+  /* background-color: color-mix(in srgb, var(--accent-color), black 10%); */
+  transform: translateY(-2px);
+  color:#333;
+  /* box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%); */
+}
+
+.hero .hero-cta .btn-primary-transp2 {
+  background-color: none;
+  color: var(--orange-color);
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: solid 2px var(--orange-color);
+  /* box-shadow: 0 4px 15px color-mix(in srgb, var(--accent-color), transparent 80%); */
+}
+.hero .hero-cta .btn-primary-transp2:hover {
+  /* background-color: color-mix(in srgb, var(--accent-color), black 10%); */
+  transform: translateY(-2px);
+  /* box-shadow: 0 8px 25px color-mix(in srgb, var(--accent-color), transparent 70%); */
 }
 
 .hero .hero-cta .btn-secondary {
@@ -954,14 +1005,14 @@ section,
 }
 
 .hero .hero-stats .stat-item .stat-number {
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 3rem;
   color: var(--accent-color);
+  font-weight: 300;
   margin-bottom: 0.25rem;
 }
 
 .hero .hero-stats .stat-item .stat-label {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   font-weight: 500;
 }
@@ -1025,6 +1076,12 @@ section,
   font-weight: 700;
   color: #22c55e;
 }
+
+
+.hero .animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
 
 @media (max-width: 992px) {
   .hero {
@@ -1141,7 +1198,7 @@ section,
   color: var(--contrast-color);
 }
 
-.about .cta-section .btn-outline {
+.btn-outline {
   display: inline-flex;
   align-items: center;
   padding: 16px 32px;
@@ -1154,7 +1211,7 @@ section,
   transition: all 0.3s ease;
 }
 
-.about .cta-section .btn-outline:hover {
+.btn-outline:hover {
   border-color: var(--accent-color);
   color: var(--accent-color);
   transform: translateY(-2px);
@@ -1243,7 +1300,8 @@ section,
 --------------------------------------------------------------*/
 .services {
   /* background-color: color-mix(in srgb, var(--background-color), var(--accent-color) 2%); */
-  background-color: var(--heading-color);
+    background: url(../img/bg-solutions.jpg) no-repeat top left;
+    background-color: var(--heading-color);
 }
 
 .services h2 {
@@ -1428,7 +1486,7 @@ section,
 }
 
 .why-us .features-grid {
-  margin-top: 80px;
+  /* margin-top: 80px; */
 }
 
 .why-us .feature-item {
@@ -4304,7 +4362,7 @@ section,
   right: 30px !important; /* mais para a esquerda */
 }
 
-/* Mobile */
+/* Mobile popup modal */
 @media (max-width: 768px) {
   .gslide-external {
     width: 95vw !important;
@@ -4312,4 +4370,24 @@ section,
     display: block !important;
     margin:0 auto !important
   }
+}
+
+/* Efeito da imagem no hero flutuando */
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.sufixo {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 4px;
+  font-size: 2rem;
+  color: var(--heading-color);
 }
