@@ -1352,11 +1352,12 @@ section,
 
 .services .service-item .service-link {
   padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
+  border: 2px solid #d1d1d1;
+  border-radius: 5px;
 }
 .services .service-item:hover .service-link {
   color: var(--accent-color);
+  border: 2px solid #999;
 }
 
 .services .service-item:hover .service-link i {
