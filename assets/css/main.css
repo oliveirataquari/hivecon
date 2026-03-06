@@ -173,13 +173,13 @@ h6 {
 
 .header .topbar .contact-info i {
   font-style: normal;
-  color: var(--contrast-color);
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
 }
 
 .header .topbar .contact-info i a,
 .header .topbar .contact-info i span {
   padding-left: 5px;
-  color: var(--contrast-color);
+  color: color-mix(in srgb, var(--contrast-color), transparent 40%);
 }
 
 @media (max-width: 575px) {
@@ -1349,7 +1349,7 @@ section,
 .services .service-item:hover .service-icon {
   transform: scale(1.1);
 }
-
+ 
 .services .service-item .service-link {
   padding: 10px 20px;
   border: 2px solid #d1d1d1;
@@ -1444,6 +1444,10 @@ section,
 /*--------------------------------------------------------------
 # Why Us Section
 --------------------------------------------------------------*/
+.hiveflow {
+  background: url(../img/bg-hiveflow.jpg) no-repeat top right;
+}
+
 .why-us {
   padding: 100px 0;
 }
@@ -1502,7 +1506,7 @@ section,
 }
 
 .why-us .feature-item:hover .icon-wrapper {
-  background-color: var(--accent-color);
+  background-color: var(--heading-color);
   color: var(--contrast-color);
   transform: scale(1.1);
 }
@@ -1521,8 +1525,8 @@ section,
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
+  background-color: var(--orange-color);
+  color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4338,40 +4342,29 @@ section,
   display:none;
 }
 
+
 /* Modal Glightbox */
 .gprev,
 .gnext {
   display: none !important;
 }
-
 .gslide-external {
   border-radius: 10px;
   overflow: hidden; /* MUITO IMPORTANTE */
 }
-
 .goverlay {
   background: rgba(0, 0, 0, 0.75) !important;
 }
-
 .gclose svg {
   width: 28px !important;
   height: 28px !important;
 }
-
 .glightbox-clean .gclose {
   top: 30px !important;   /* mais para baixo */
   right: 30px !important; /* mais para a esquerda */
 }
 
-/* Mobile popup modal */
-@media (max-width: 768px) {
-  .gslide-external {
-    width: 95vw !important;
-    height: 90vh !important;
-    display: block !important;
-    margin:0 auto !important
-  }
-}
+
 
 /* Efeito da imagem no hero flutuando */
 @keyframes up-down {
@@ -4384,6 +4377,7 @@ section,
 }
 
 
+
 .sufixo {
   display: flex;
   align-items: center;
@@ -4391,4 +4385,18 @@ section,
   gap: 4px;
   font-size: 2rem;
   color: var(--heading-color);
+}
+
+
+/* Only mobile/desktop */
+.only-mobile {
+    display: none !important;
+}
+@media (max-width: 768px) {
+  .only-mobile {
+    display: block !important;
+  }
+  .only-desktop {
+    display: none !important;
+  }
 }
